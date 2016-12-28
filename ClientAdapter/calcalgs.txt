@@ -1,0 +1,43 @@
+DWORD GetMagicNumber(BYTE * buf, UINT cb, BOOL bIncludeSize)
+{
+	DWORD dwCS = 0;
+	UINT i;
+	if (bIncludeSize)	dwCS += cb<<16;
+	// sum up the DWORDs:
+	for (i=0; i<(cb>>2); i++)	dwCS += ((DWORD *)buf)[i];
+	// now any remaining bytes are summed in reverse endian
+	int shift=3;
+	for (i=(i<<2); i<cb; i++)	{dwCS += buf[i]<<(shift*8); shift--;}
+	return dwCS;
+}
+
+void NetworkPipe::GenerateTransportHeader (int len)
+{
+	thdr->dwSeqnum=seqnum;
+   thdr->dwCRC = 0;
+	thdr->dwFlags=0x0802;
+
+	ulong new_crc=Calc802_CRC((ulong *)send_buffer, (char *)send_buffer) ^ Fetch_XORVAL_SEND()
+      + CalcTransportCRC((ulong *)send_buffer) + 0x3291975;
+}
+
+ulong NetworkPipe::Calc802_CRC (ulong *hex, char *buf)
+{
+	int ofs=20,hofs=5,size,plen;
+	ulong crc,*woot=hex;
+	size=(hex[4]&0xFFFF)+20; crc=0;
+	while (ofs<size)
+	{
+		plen=(hex[hofs+2]>>16);
+		crc+=GetMagicNumber((BYTE *)&hex[hofs], 16, 1);
+		crc+=GetMagicNumber((BYTE *)&hex[hofs+4], plen-16, 1);
+		ofs+=plen; hofs=0;
+		hex=(ulong *)&buf[ofs];
+	}
+	return crc;
+}
+
+ulong NetworkPipe::CalcTransportCRC (ulong *woot)
+{
+	return GetMagicNumber ( (BYTE *)woot, 20, 1 );
+}

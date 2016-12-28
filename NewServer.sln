@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ACServer", "ACServer\ACServer.vcproj", "{F92DD520-F927-48B4-9BD1-0CE0AF914DB3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DirServ", "DirServ\DirServ.vcproj", "{6C59EF08-4CA9-400D-9986-545FB0D2ADE7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F92DD520-F927-48B4-9BD1-0CE0AF914DB3}.Debug.ActiveCfg = Debug|Win32
+		{F92DD520-F927-48B4-9BD1-0CE0AF914DB3}.Debug.Build.0 = Debug|Win32
+		{F92DD520-F927-48B4-9BD1-0CE0AF914DB3}.Release.ActiveCfg = Release|Win32
+		{F92DD520-F927-48B4-9BD1-0CE0AF914DB3}.Release.Build.0 = Release|Win32
+		{6C59EF08-4CA9-400D-9986-545FB0D2ADE7}.Debug.ActiveCfg = Debug|Win32
+		{6C59EF08-4CA9-400D-9986-545FB0D2ADE7}.Debug.Build.0 = Debug|Win32
+		{6C59EF08-4CA9-400D-9986-545FB0D2ADE7}.Release.ActiveCfg = Release|Win32
+		{6C59EF08-4CA9-400D-9986-545FB0D2ADE7}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

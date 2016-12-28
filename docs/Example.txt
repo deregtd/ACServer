@@ -1,0 +1,108 @@
+This is just an example of a flexable script
+
+///////////////////////////////////////////////////////////////////////
+//
+//   ITEMDESC.CFG - Item Definitions
+//
+//   Descriptors for Items, Containers, and Doors go here.
+//
+//   ITEM: The following may be specified for an item:
+//	0 = No	1 = Yes
+//	Name		Object Name
+//	Hue		# of suitable color (0 = default color from model)
+//	DecayTime       # of minutes before item decays (0 = infinate)
+//	Desc		description
+//	Model		display graphic (defaults to objtype)
+//	Invisible	if 1, this objtype is never seen.
+//	Lockable	is this item lockable
+//	Movable		is this movable by default?
+//	Script          script to run on double-click
+//	Value		Base Value in Pyreals
+//	Weight          weight in burden units
+//	Selltowho	NPC script name to which the item can be sold to
+//	Nodrop		is this droppable/givable?
+//	Uses		# of uses before item is destroyed. 0 = infinate
+//	Where		Where on the body is it used?
+//	Inscribable	is the object inscribable?
+//	Icon		object inventory icon
+//	Dropondeath	is it droppable from death?
+//
+//    CONTAINER
+//	Name		name key
+//	Hue		# of suitable color
+//	DecayTime       # of minutes before item decays
+//	Desc		description
+//	Graphic		display graphic (defaults to objtype)
+//	Slots		# of available item slots
+//	Weight		base weight in burden units
+//	VendorBuysFor   base price vendors buy this for
+//	VendorSellsFor  base price vendors sell this for
+//
+//    DOORS
+//	xmod            X modifier to door position to open/close
+//	ymod            Y modifier to door position to open/close
+//	doortype        wood/metal, used for determing sound.
+///////////////////////////////////////////////////////////////////////
+
+Item 0x1
+{	
+	Name		Mana Stone
+	Hue		0
+	DecayTime       10
+	Desc		Use on a magic item to destroy that item and drain its Mana. %n (%n = next line) Stored Mana: %sm (%sm = stored mana) %n Efficiency: 50%
+	Model		1209
+	Invisible	0
+	Lockable	0
+	Movable		1
+	Script		emptymanastone
+	Value		1000
+	Weight		50
+	Selltowho	magevendor
+	Nodrop		1
+	Uses		2
+	Inscribable	1
+	Icon		?
+	Dropondeath	1
+}
+
+Item 0x2
+{	
+	Name		Stone Tool
+	Hue		0
+	DecayTime       0
+	Desc		Use this tool to remove an elemental stone from an Empyrean weapon or a piece of Shadow Armor.
+	Model		1976
+	Invisible	0
+	Lockable	0
+	Movable		1
+	Script		stonetool
+	Value		5000
+	Weight		5
+	Selltowho	provisionervendor
+	Nodrop		0
+	Uses		0
+	Inscribable	1
+	Icon		?
+	Dropondeath	0
+}
+
+Item 0x3
+{	
+	Name		Trade Note
+	Hue		0
+	DecayTime       10
+	Desc		Worth 10,000 pyreals when redeemed at a vendor.
+	Model		341
+	Invisible	0
+	Lockable	0
+	Movable		1
+	Script		tradenotec
+	Value		10000
+	Weight		5
+	Selltowho	vendor
+	Nodrop		0
+	Uses		0
+	Inscribable	1
+	Icon		?
+	Dropondeath	0
+}

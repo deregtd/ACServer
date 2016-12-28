@@ -1,0 +1,9 @@
+; Inject.def : Declares the module parameters.
+
+LIBRARY      "ClientInject.DLL"
+
+SECTIONS
+	InjectDll READ WRITE SHARED
+
+EXPORTS
+	hookCBTProc	 @1

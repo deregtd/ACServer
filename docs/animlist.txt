@@ -1,0 +1,64 @@
+Animation Numbers:
+
+05: walk
+07: run
+08: die
+09: tap feet like turning
+0D: turn right
+0F: slide right
+11: die
+12: kneel
+13: sit
+14: lie down
+15: falling
+18: pick up item
+19: scratch back (take out arrow?)
+1a: drink potion
+1b: drink potion
+1c: learn scroll
+
+3c: punch combat
+3E: dagger combat without shield
+3f: bow combat
+40: dagger combat with shield
+41: crossbow combat
+47: thrown weapons combat
+49: spell casting combat
+
+4a: WTF
+4c: cheer
+
+80: I key on laptop
+81: drink potion
+82: drink potion
+83: tilt torso left for a sec
+84: *point*
+86: *shrug*
+87: wave
+88: *akimbo*
+89: hearty laugh thing (*lol*?)
+8a: hand across chest (*salute*?)
+8B: scratch head
+8C: smack head
+8d: tap foot
+8e: wave high
+8f: wave vertically..?
+90: *yawn*
+91: dodge or something
+92: swearing
+93: *plead*
+94: read scroll
+95: bah motion thing (*dismiss*?)
+96: stare dumbfoundedly
+97: knock door down with head (australian for locksmith)
+98: *surrender*
+99: bandaging
+9a: breathe heavy thing
+9b: YMCA!
+
+a0: bubbly invisible
+a1: bubbly visible
+
+fX: copies of other ones... but perm for emotes
+f0: *point*, perm
+

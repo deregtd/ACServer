@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClientAdapter", "ClientAdapter\ClientAdapter.vcproj", "{BC32353F-F5BE-409E-BE6A-F2EB4A869319}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClientInject", "ClientInject\ClientInject.vcproj", "{579A28E0-9022-4F14-A1D3-67B3E3522051}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClientLogon", "ClientLogon\ClientLogon.vcproj", "{454E2AA1-21EF-482E-84B1-724E85395B2D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BC32353F-F5BE-409E-BE6A-F2EB4A869319}.Debug.ActiveCfg = Debug|Win32
+		{BC32353F-F5BE-409E-BE6A-F2EB4A869319}.Debug.Build.0 = Debug|Win32
+		{BC32353F-F5BE-409E-BE6A-F2EB4A869319}.Release.ActiveCfg = Release|Win32
+		{BC32353F-F5BE-409E-BE6A-F2EB4A869319}.Release.Build.0 = Release|Win32
+		{579A28E0-9022-4F14-A1D3-67B3E3522051}.Debug.ActiveCfg = Debug|Win32
+		{579A28E0-9022-4F14-A1D3-67B3E3522051}.Debug.Build.0 = Debug|Win32
+		{579A28E0-9022-4F14-A1D3-67B3E3522051}.Release.ActiveCfg = Release|Win32
+		{579A28E0-9022-4F14-A1D3-67B3E3522051}.Release.Build.0 = Release|Win32
+		{454E2AA1-21EF-482E-84B1-724E85395B2D}.Debug.ActiveCfg = Debug|Win32
+		{454E2AA1-21EF-482E-84B1-724E85395B2D}.Debug.Build.0 = Debug|Win32
+		{454E2AA1-21EF-482E-84B1-724E85395B2D}.Release.ActiveCfg = Release|Win32
+		{454E2AA1-21EF-482E-84B1-724E85395B2D}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

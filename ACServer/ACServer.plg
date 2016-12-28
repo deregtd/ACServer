@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ACServer - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP354.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release/" /Fp"Release/ACServer.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\acserver\ACServer\Network.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP354.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP355.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib wsock32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/ACServer.pdb" /machine:I386 /out:"Release/ACServer.exe" 
+.\Release\ACServer.obj
+.\Release\GameParsing.obj
+.\Release\HighLevelFuncs.obj
+.\Release\Network.obj
+.\Release\StdAfx.obj
+.\Release\WorldItems.obj
+.\Release\ACServer.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP355.tmp"
+<h3>Output Window</h3>
+Compiling...
+Network.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Release/ACServer.bsc"  .\Release\StdAfx.sbr .\Release\ACServer.sbr .\Release\GameParsing.sbr .\Release\HighLevelFuncs.sbr .\Release\Network.sbr .\Release\WorldItems.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+ACServer.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

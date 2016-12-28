@@ -1,0 +1,220 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ACSERVER            ICON    DISCARDABLE     "ACServer.ICO"
+IDI_SMALL               ICON    DISCARDABLE     "SMALL.ICO"
+IDI_NOACT               ICON    DISCARDABLE     "icon1.ico"
+IDI_ACT                 ICON    DISCARDABLE     "ico00001.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_ACSERVER ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINDLG DIALOG DISCARDABLE  22, 17, 350, 255
+STYLE WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ACServer - Initializing..."
+MENU IDR_ACSERVER
+FONT 8, "System"
+BEGIN
+    LISTBOX         IDC_LIST1,0,13,350,136,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_CHARLIST,0,150,350,105,NOT LBS_NOTIFY | 
+                    LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Listen IP:Port",IDC_STATIC,2,1,47,10
+    EDITTEXT        IDC_CSIP,49,1,68,10,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Start Listen",IDC_STARTLISTEN,295,0,55,11
+END
+
+IDD_OPTIONS DIALOG DISCARDABLE  0, 0, 288, 297
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "ACServer Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,163,276,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,231,276,50,14
+    GROUPBOX        "MOTD",IDC_STATIC,7,97,274,172
+    GROUPBOX        "Server Name",IDC_STATIC,7,7,274,28
+    GROUPBOX        "Listen Port",IDC_STATIC,224,67,57,28
+    EDITTEXT        IDC_EDIT1,13,16,259,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,232,77,41,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT3,13,118,262,147,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | WS_VSCROLL
+    GROUPBOX        "Administrator Name",IDC_STATIC,7,37,187,28
+    GROUPBOX        "Connection Speed",IDC_STATIC,204,37,77,28
+    EDITTEXT        IDC_EDIT5,13,47,175,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,212,47,61,14,ES_AUTOHSCROLL
+    CONTROL         "Private Server",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,47,279,58,11
+    GROUPBOX        "Server Hostname (If Any, if not leave blank)",
+                    IDC_STATIC,7,67,208,28
+    EDITTEXT        IDC_EDIT6,13,77,195,14,ES_AUTOHSCROLL
+    CONTROL         "Display Generated MOTD Header",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,106,121,11
+END
+
+IDD_SRVMSG DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Display Server Message"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,74,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,7,74,50,14
+    GROUPBOX        "Message",IDC_STATIC,7,4,172,66
+    EDITTEXT        IDC_EDIT1,13,17,160,47,ES_MULTILINE | ES_AUTOHSCROLL
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_ACSERVER MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Server"
+    BEGIN
+        MENUITEM "Reset &Log",                  ID_FILE_RESETLOG
+        MENUITEM "&Reset All Connections",      ID_FILE_RESETALLCONNECTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "Clear Ob&jects List",         ID_OPTIONS_CLEAROBJECTSLIST
+        MENUITEM "Clear &User List",            ID_OPTIONS_CLEARUSERLIST
+        MENUITEM SEPARATOR
+        MENUITEM "&Options",                    ID_OPTIONS_OPENOPTIONS
+    END
+    POPUP "&Commands"
+    BEGIN
+        MENUITEM "Start &Listen",               ID_COMMANDS_STARTLISTEN
+        MENUITEM "&Kick Selected User",         ID_FILE_KICKSELECTEDUSER
+        MENUITEM SEPARATOR
+        MENUITEM "Server &Message",             ID_COMMANDS_SERVERMESSAGE
+    END
+END
+
+IDR_USERPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "Testing"
+    BEGIN
+        MENUITEM "&View Info",                  ID_VIEWINFO, GRAYED
+        MENUITEM "&Kick User",                  ID_KICK_USER
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 290
+    END
+
+    IDD_SRVMSG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
